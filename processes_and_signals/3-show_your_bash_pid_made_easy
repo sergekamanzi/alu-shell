@@ -1,6 +1,10 @@
-#!/usr/bin/env bash
-# This script extends previous exercise command and displays line containing the bash word, this allowing you to easily get the PID of your Bash process
-# You cannot use pgrep
-# shellcheck disable=SC2009
+#!/bin/bash
 
-./1-list_your_processes | grep "bash"
+# Find the PIDs of processes whose names contain the word "bash"
+pids=$(pgrep -f bash)
+
+# Loop through each PID and display the PID and process name
+for pid in $pids; do
+    process_name=$(ps -o comm= -p $pid)
+    echo "PID: $pid, Process Name: $process_name"
+done
