@@ -4,7 +4,7 @@
 # Function to start the manage_my_process script
 #  Function to stop the manage_my_process script
 PID_FILE="/var/run/my_process.pid"
-PROCESS_NAME="manage_my_process"
+PROCESS_NAME="manage_my_process started"
 
 start_process() {
     if [ -f "$PID_FILE" ]; then
@@ -12,7 +12,7 @@ start_process() {
     else
         ./manage_my_process >/dev/null 2>&1 &
         echo -n $! > "$PID_FILE"
-        echo "manage_my_process started"
+        echo "$PROCESS_NAME started"
     fi
 }
 
