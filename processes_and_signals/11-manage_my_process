@@ -12,7 +12,7 @@ start_process() {
     else
         ./manage_my_process >/dev/null 2>&1 &
         echo -n $! > "$PID_FILE"
-        echo "$PROCESS_NAME started"
+        echo "manage_my_process started"
     fi
 }
 
