@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# This script performs a specific task.
+#  Bash script to manage the "manage_my_process" script
+# Function to start the manage_my_process script
+#  Function to stop the manage_my_process script
 PID_FILE="/var/run/my_process.pid"
 PROCESS_NAME="manage_my_process"
 
