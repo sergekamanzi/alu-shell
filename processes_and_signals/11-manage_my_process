@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#Start manage_my_process
+#Check if the manage_my_process is already running
 PID_FILE="/var/run/my_process.pid"
 PROCESS_NAME="manage_my_process"
 
